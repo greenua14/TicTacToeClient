@@ -11,7 +11,7 @@
   </resources>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="TicToc.jar" size="32740" download="eager" />
+    <jar href="TicToc.jar" size="33400" download="eager" />
   </resources>
   <applet-desc  width="255" height="198" main-class="com.javafx.main.NoJavaFXFallback"  name="TicToc" >
     <param name="requiredFXVersion" value="2.2+"/>

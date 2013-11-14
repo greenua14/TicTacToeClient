@@ -35,7 +35,7 @@ public class AuthorizationController {
         } else {
             InteractionWithServer server = new InteractionWithServer();
             if (server.authorization(log, pass)) {
-                new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", "TicTacToe");
+                new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", log);
                 closeThis();
             } else {
                 new LoadSomeForm().load("FXML/errorForm.fxml", "Error");

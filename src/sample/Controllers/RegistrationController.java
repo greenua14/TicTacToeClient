@@ -43,7 +43,7 @@ public class RegistrationController {
             } else {
                 InteractionWithServer server2 = new InteractionWithServer();
                 server2.registration(log, pass, em);
-                new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", "TicTacToe");
+                new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", log);
                 closeThis();
             }
         }
