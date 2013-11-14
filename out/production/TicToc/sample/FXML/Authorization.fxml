@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="227.0" minWidth="-Infinity" prefHeight="232.0"
+            prefWidth="274.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="sample.Controllers.AuthorizationController">
+    <children>
+        <Label layoutX="62.0" layoutY="16.0" prefHeight="30.0" prefWidth="150.0" styleClass="label1"
+               text="Авторизация"/>
+        <TextField fx:id="login" layoutX="37.0" layoutY="77.0" prefWidth="200.0" text=""/>
+        <PasswordField fx:id="password" layoutX="37.0" layoutY="129.0" prefWidth="200.0"/>
+        <Button fx:id="signInButton" layoutX="92.0" layoutY="161.0" mnemonicParsing="false" onAction="#signIn"
+                prefHeight="30.0" prefWidth="90.0" text="Вход"/>
+        <Hyperlink layoutX="79.0" layoutY="202.0" onAction="#showRegistrationForm" text="Зарегистрироваться"/>
+        <Label layoutX="37.0" layoutY="61.0" text="Логин"/>
+        <Label layoutX="37.0" layoutY="113.0" text="Пароль"/>
+
+    </children>
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+</AnchorPane>

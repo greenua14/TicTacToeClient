@@ -1,0 +1,23 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" build-on-make="true" name="TicTac">
+    <output-path>$PROJECT_DIR$/out/artifacts/TicTac</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="height" value="198" />
+        <option name="htmlParamFile" value="" />
+        <option name="paramFile" value="" />
+        <option name="title" value="TacTacToe" />
+        <option name="updateMode" value="always" />
+        <option name="vendor" value="" />
+        <option name="width" value="255" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="TicToc.jar">
+        <element id="module-output" name="TicToc" />
+      </element>
+    </root>
+  </artifact>
+</component>

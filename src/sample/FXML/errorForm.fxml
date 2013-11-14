@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" fx:id="ErrorFormID" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="100.0"
+            minWidth="-Infinity" prefWidth="339.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.ErrorFormController">
+    <children>
+        <Label fx:id="textErrorID" alignment="CENTER" contentDisplay="CENTER" layoutX="15.0" layoutY="14.0"
+               minHeight="24.0" prefWidth="311.0" text="some error" textAlignment="CENTER"
+               textOverrun="CLIP">
+            <rotationAxis>
+                <Point3D z="1.0"/>
+            </rotationAxis>
+        </Label>
+    </children>
+</AnchorPane>

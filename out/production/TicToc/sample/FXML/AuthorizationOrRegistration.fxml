@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="198.0" prefWidth="255.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.AuthorizationOrRegistrationController">
+    <children>
+        <Button layoutX="47.0" layoutY="84.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="177.0"
+                text="Авторизироваться" onAction="#gotoAuthorization" fx:id="authorizationButton"/>
+        <Button layoutX="47.0" layoutY="135.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="177.0"
+                text="Зарегистрироваться" onAction="#gotoRegistration" fx:id="registrationButton"/>
+        <Label layoutX="39.0" layoutY="29.0" prefHeight="36.0" prefWidth="177.0" styleClass="gameNameLabel"
+               text="Tic Tak Toe"/>
+    </children>
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+</AnchorPane>

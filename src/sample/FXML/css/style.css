@@ -1,0 +1,11 @@
+.gameNameLabel{
+    -fx-font-size: 26px;
+    -fx-alignment: center;
+    -fx-font-family: monospace;
+    -fx-font-style: italic;
+}
+
+.label1{
+    -fx-font-size: 20px;
+    -fx-alignment: center;
+}

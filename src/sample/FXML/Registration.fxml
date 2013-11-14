@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="335.0" prefWidth="273.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.RegistrationController">
+    <children>
+        <TextField fx:id="login" layoutX="40.0" layoutY="80.0" prefWidth="200.0" text=""/>
+        <PasswordField fx:id="password" layoutX="40.0" layoutY="129.0" prefWidth="200.0"/>
+        <PasswordField fx:id="confirmPassword" layoutX="40.0" layoutY="177.0" prefWidth="200.0"/>
+        <TextField fx:id="email" layoutX="40.0" layoutY="229.0" prefWidth="200.0" text=""/>
+        <Label layoutX="47.0" layoutY="27.0" prefWidth="179.0" styleClass="label1" text="Регистрация"/>
+        <Button fx:id="regButton" layoutX="71.0" layoutY="267.0" mnemonicParsing="false" onAction="#SignUp"
+                prefHeight="30.0" text="Зарегистрироваться"/>
+        <Hyperlink layoutX="83.0" layoutY="306.0" onAction="#showAuthorizationForm" text="Авторизироваться"/>
+        <Label layoutX="40.0" layoutY="64.0" text="Логин"/>
+        <Label layoutX="40.0" layoutY="113.0" text="Пароль"/>
+        <Label layoutX="40.0" layoutY="161.0" text="Пароль"/>
+        <Label layoutX="40.0" layoutY="213.0" text="Email"/>
+    </children>
+    <stylesheets>
+        <URL value="@css/style.css"/>
+    </stylesheets>
+</AnchorPane>
