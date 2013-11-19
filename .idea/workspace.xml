@@ -9,19 +9,19 @@
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384348218250" ignored="false" />
+    <file path="/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384615262963" ignored="false" />
     <file path="/Controller.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381051202" ignored="false" />
     <file path="/sample.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1359381080865" ignored="false" />
     <file path="/MainController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383673463762" ignored="false" />
     <file path="/AuthorizationOrRegistration.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383678959446" ignored="false" />
     <file path="/style.css" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383678800100" ignored="false" />
-    <file path="/Authorization.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384350695537" ignored="false" />
+    <file path="/Authorization.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384602390445" ignored="false" />
     <file path="/AuthorizationOrRegistrationController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384282228691" ignored="false" />
     <file path="/LoadSomeForm.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384277752795" ignored="false" />
     <file path="/Registration.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383680139141" ignored="false" />
     <file path="/AuthorizationController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384426025213" ignored="false" />
     <file path="/RegistrationController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384426036448" ignored="false" />
-    <file path="$PROJECT_DIR$/../ServerForTicTac/src/server/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384421506412" ignored="false" />
+    <file path="$PROJECT_DIR$/../ServerForTicTac/src/server/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384615263276" ignored="false" />
     <file path="/GetIpAndPortFromFile.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1383939845214" ignored="false" />
     <file path="$PROJECT_DIR$/../tictactest/src/com/company/Main.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384158998932" ignored="false" />
     <file path="$PROJECT_DIR$/../tictactest/src/com/company/GetIpAndPortFromFile.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384158972744" ignored="false" />
@@ -29,7 +29,7 @@
     <file path="/DataBase.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384344464815" ignored="false" />
     <file path="/errorForm.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384285945291" ignored="false" />
     <file path="/ErrorFormController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384286382217" ignored="false" />
-    <file path="/InteractionWithServer.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384351480082" ignored="false" />
+    <file path="/InteractionWithServer.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384600414126" ignored="false" />
     <file path="/Authorization.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384274665304" ignored="false" />
     <file path="$PROJECT_DIR$/../ServerForTicTac/src/server/ActivityWithUser.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384425116807" ignored="false" />
     <file path="/ActivityWithUser.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384347698011" ignored="false" />
@@ -41,9 +41,14 @@
     <file path="/MD5.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384336358784" ignored="false" />
     <file path="$PROJECT_DIR$/../ServerForTicTac/src/generalClasses/RegistrationUser.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384336808308" ignored="false" />
     <file path="/UserLogin.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384346594743" ignored="false" />
-    <file path="/CreateOrConnectToGameController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384427684542" ignored="false" />
-    <file path="/CreateGame.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384427727191" ignored="false" />
-    <file path="/CreateGameController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384428052984" ignored="false" />
+    <file path="/CreateOrConnectToGameController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384602501088" ignored="false" />
+    <file path="/CreateGame.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384616382310" ignored="false" />
+    <file path="/CreateGameController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384860043314" ignored="false" />
+    <file path="$PROJECT_DIR$/../ServerForTicTac/src/generalClasses/MakeStep.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384615377589" ignored="false" />
+    <file path="/MakeStep.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384615318491" ignored="false" />
+    <file path="/Game.fxml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384618085626" ignored="false" />
+    <file path="/GameController.java" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384618279413" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="cdb932d9-7e58-4d94-93a9-e7b232ef17da" time="1384618591985" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,51 +126,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="21" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorizationController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/AuthorizationController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="78" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateOrConnectToGameController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateOrConnectToGameController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="20" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CreateGame.fxml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sample/FXML/CreateGame.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="68" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
+            <state line="36" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CreateGameController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateGameController.java">
+      <file leaf-file-name="LoadSomeForm.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/LoadSomeForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="34" selection-start="605" selection-end="605" vertical-scroll-proportion="0.46088794">
+            <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateOrConnectToGameController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateOrConnectToGameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.7267857">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GameController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Controllers/GameController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="33" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -180,22 +174,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/sample/FXML/MainInterface.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/AuthorizationOrRegistrationController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/ErrorFormController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/errorForm.fxml" />
         <option value="$PROJECT_DIR$/src/generalClasses/RegistrationUser.java" />
         <option value="$PROJECT_DIR$/src/generalClasses/UserLogin.java" />
-        <option value="$PROJECT_DIR$/src/sample/InteractionWithServer.java" />
         <option value="$PROJECT_DIR$/config" />
-        <option value="$PROJECT_DIR$/src/sample/FXML/Authorization.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/Registration.fxml" />
         <option value="$PROJECT_DIR$/src/sample/FXML/CreateOrConnectToGame.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/AuthorizationController.java" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/RegistrationController.java" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/AuthorizationController.java" />
+        <option value="$PROJECT_DIR$/src/sample/InteractionWithServer.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Authorization.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Controllers/CreateOrConnectToGameController.java" />
-        <option value="$PROJECT_DIR$/src/sample/Controllers/CreateGameController.java" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/game.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/FXML/Game.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/GameController.java" />
         <option value="$PROJECT_DIR$/src/sample/FXML/CreateGame.fxml" />
+        <option value="$PROJECT_DIR$/src/sample/Controllers/CreateGameController.java" />
       </list>
     </option>
   </component>
@@ -203,7 +197,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -254,7 +248,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -355,6 +348,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -366,7 +360,7 @@
     <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ServerForTicTac" />
+    <property name="last_opened_file_path" value="C:/Program Files (x86)/Oracle/JavaFX Scene Builder 1.1/JavaFX Scene Builder 1.1.exe" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
@@ -571,13 +565,12 @@
     <option name="totallyTimeSpent" value="1302000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43515357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -593,12 +586,13 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26666668" sideWeight="0.85153586" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14846416" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26595744" sideWeight="0.88566554" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.11433447" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935154" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -668,55 +662,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/generalClasses/RegistrationUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="53" selection-start="108" selection-end="108" vertical-scroll-proportion="0.09189189">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generalClasses/AuthorizationUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="167" selection-end="167" vertical-scroll-proportion="0.2918455">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/generalClasses/UserLogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="46" selection-start="101" selection-end="101" vertical-scroll-proportion="0.14592275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/InteractionWithServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="83" selection-start="1840" selection-end="1840" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="14" selection-start="23" selection-end="23" vertical-scroll-proportion="0.040189125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/AuthorizationOrRegistration.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="59" selection-start="917" selection-end="917" vertical-scroll-proportion="0.64608073">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Authorization.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="90" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/Registration.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="61" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
@@ -731,20 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/RegistrationController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="78" selection-start="1707" selection-end="1707" vertical-scroll-proportion="0.7526427">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="21" selection-start="811" selection-end="811" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/FXML/CreateOrConnectToGame.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="33" selection-start="917" selection-end="917" vertical-scroll-proportion="0.59130436">
@@ -752,32 +683,97 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/AuthorizationController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/InteractionWithServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="78" selection-start="1358" selection-end="1358" vertical-scroll-proportion="0.0">
+        <state line="41" column="4" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.27458256">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateOrConnectToGameController.java">
+    <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="20" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="16" column="0" selection-start="470" selection-end="470" vertical-scroll-proportion="0.3153989">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sample/FXML/CreateGame.fxml">
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Authorization.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="68" selection-start="1102" selection-end="1102" vertical-scroll-proportion="0.0">
+        <state line="16" column="103" selection-start="844" selection-end="844" vertical-scroll-proportion="0.6196808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/AuthorizationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="67" selection-start="1326" selection-end="1347" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/RegistrationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="32" selection-start="1438" selection-end="1438" vertical-scroll-proportion="0.03142329">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="13" selection-start="30" selection-end="30" vertical-scroll-proportion="0.06049822">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/ErrorFormController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.15124555">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/GameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="33" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/Game.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="21" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/LoadSomeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateGameController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="34" selection-start="605" selection-end="605" vertical-scroll-proportion="0.46088794">
+        <state line="42" column="57" selection-start="1470" selection-end="1470" vertical-scroll-proportion="0.7241379">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1820#2773#0" expanded="true" />
+            <element signature="e#2762#2763#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/FXML/CreateGame.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="0" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sample/Controllers/CreateOrConnectToGameController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="699" selection-end="699" vertical-scroll-proportion="0.7267857">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
