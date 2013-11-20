@@ -1,6 +1,7 @@
 package sample;
 
 import generalClasses.AuthorizationUser;
+import generalClasses.GameInfo;
 import generalClasses.RegistrationUser;
 import generalClasses.UserLogin;
 
@@ -13,11 +14,23 @@ public class InteractionWithServer {
     private ObjectOutputStream outputStream = null;
     private ObjectInputStream inputStream = null;
     private Socket client = null;
+    public GetIpAndPortFromFile config;
 
     public InteractionWithServer() {
-        GetIpAndPortFromFile config = new GetIpAndPortFromFile();
+        config = new GetIpAndPortFromFile();
         try {
             client = new Socket(config.IP, config.PORT);
+            outputStream = new ObjectOutputStream((client.getOutputStream()));
+            inputStream = new ObjectInputStream(client.getInputStream());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public InteractionWithServer(int port) {
+        config = new GetIpAndPortFromFile();
+        try {
+            client = new Socket(config.IP, port);
             outputStream = new ObjectOutputStream((client.getOutputStream()));
             inputStream = new ObjectInputStream(client.getInputStream());
         } catch (IOException e) {
@@ -30,9 +43,7 @@ public class InteractionWithServer {
             outputStream.writeObject(new AuthorizationUser(login, password));
             outputStream.flush();
             return (boolean) inputStream.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return false;
@@ -43,9 +54,7 @@ public class InteractionWithServer {
             outputStream.writeObject(new UserLogin(login));
             outputStream.flush();
             return (boolean) inputStream.readObject();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
         return false;
@@ -58,5 +67,18 @@ public class InteractionWithServer {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public int createGame(GameInfo gameInfo) throws Exception {
+        try {
+            outputStream.writeObject(gameInfo);
+            outputStream.flush();
+            int a =(int)inputStream.readObject();
+            System.out.println(a+"from createGame");
+            return a ;
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        throw new Exception("*** Create game error");
     }
 }

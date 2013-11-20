@@ -34,7 +34,6 @@
         <ChoiceBox fx:id="fieldSize" layoutX="139.0" layoutY="49.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
-
                 </FXCollections>
             </items>
         </ChoiceBox>
