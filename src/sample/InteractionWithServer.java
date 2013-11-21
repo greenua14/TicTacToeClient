@@ -33,6 +33,7 @@ public class InteractionWithServer {
             client = new Socket(config.IP, port);
             outputStream = new ObjectOutputStream((client.getOutputStream()));
             inputStream = new ObjectInputStream(client.getInputStream());
+            System.out.println("InteractionWithServer connect gj");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -73,9 +74,7 @@ public class InteractionWithServer {
         try {
             outputStream.writeObject(gameInfo);
             outputStream.flush();
-            int a =(int)inputStream.readObject();
-            System.out.println(a+"from createGame");
-            return a ;
+            return (int)inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

@@ -2,12 +2,12 @@ package sample.Controllers;
 
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.ColumnConstraints;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
+import sample.InteractionWithServer;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,7 +18,7 @@ public class GameController implements Initializable{
     public static String figureStyle;
     public static int boxCount;
     public static int peopleCount;
-    public static Label PORT;
+    public static int PORT;
 
     public static boolean makeStep(){
     return true;
@@ -39,6 +39,11 @@ public class GameController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        boxCount = CreateGameController.boxCount;
+        peopleCount = CreateGameController.peopleCount;
+        figureStyle = CreateGameController.figureStyle;
+        PORT = CreateGameController.PORT;
+
         for(int i=0;i<boxCount;i++){
             gameField.getColumnConstraints().add(new ColumnConstraints(22));
             gameField.getRowConstraints().add(new RowConstraints(22));
@@ -46,6 +51,6 @@ public class GameController implements Initializable{
                 gameField.add(createPane(j,i),j,i);
             }
         }
-        PORT.setLayoutX(gameField.getLayoutX()+22*boxCount+20);
+        InteractionWithServer server = new InteractionWithServer(PORT);
     }
 }

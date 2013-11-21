@@ -12,6 +12,6 @@
             fx:controller="sample.Controllers.GameController">
     <children>
         <GridPane fx:id="gameField" gridLinesVisible="true" layoutX="14.0" layoutY="14.0"/>
-        <Label layoutX="243.0" layoutY="13.0" text="port" fx:id="PORT"/>
+        <Label layoutX="243.0" layoutY="13.0" text="port"/>
     </children>
 </AnchorPane>

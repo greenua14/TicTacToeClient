@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.sun.javafx.scene.control.skin.ListViewSkin?>
+<?import com.sun.javafx.scene.control.skin.SplitPaneSkin.Content?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="192.00009999999747" prefWidth="277.0" xmlns:fx="http://javafx.com/fxml/1"
+            prefHeight="204.00009999999747" prefWidth="276.9998779296875" xmlns:fx="http://javafx.com/fxml/1"
             xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.CreateGameController">
     <children>
-        <Hyperlink fx:id="backLink" layoutX="119.0" layoutY="164.0" onAction="#goBack" text="Назад"/>
+        <Hyperlink fx:id="backLink" layoutX="119.0" layoutY="173.0" onAction="#goBack" text="Назад"/>
         <Label layoutX="14.0" layoutY="14.0" text="Количество игроков"/>
         <Label layoutX="14.0" layoutY="49.0" text="Размер поля"/>
-        <Button fx:id="createGameButton" layoutX="65.0" layoutY="109.0" mnemonicParsing="false" onAction="#createGame"
+        <Button fx:id="createGameButton" layoutX="65.0" layoutY="126.0" mnemonicParsing="false" onAction="#createGame"
                 prefHeight="40.0" prefWidth="147.0" text="Создать" textAlignment="CENTER">
             <font>
                 <Font name="Arial Bold" size="17.0"/>
             </font>
         </Button>
-        <ChoiceBox fx:id="playersCount" layoutX="139.0" layoutY="14.0">
+        <ComboBox fx:id="playersCount" layoutX="139.0" layoutY="14.0" prefWidth="50.0">
             <items>
                 <FXCollections fx:factory="observableArrayList">
                     <String fx:value="2"/>
@@ -30,12 +35,14 @@
                     <String fx:value="5"/>
                 </FXCollections>
             </items>
-        </ChoiceBox>
-        <ChoiceBox fx:id="fieldSize" layoutX="139.0" layoutY="49.0">
+        </ComboBox>
+        <ComboBox fx:id="fieldSize" layoutX="139.0" layoutY="49.0">
             <items>
-                <FXCollections fx:factory="observableArrayList">
-                </FXCollections>
+                <FXCollections fx:factory="observableArrayList"/>
             </items>
-        </ChoiceBox>
+        </ComboBox>
+        <Label layoutX="14.0" layoutY="84.0" text="Фигура"/>
+        <ComboBox fx:id="pictures" layoutX="139.0" layoutY="82.0" prefHeight="22.0" prefWidth="50.0">
+        </ComboBox>
     </children>
 </AnchorPane>

@@ -1,40 +1,63 @@
 package generalClasses;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 public class GameInfo implements Serializable{
     private String fatherLogin;
-    private int playersCount;
+    private int playersCountMax;
+    private int playersCountNow;
     private int fieldSize;
-    private int port;
+    private List<String> pictures;
+    private HashMap<String,String> playersList;
 
     public GameInfo(){
 
     }
 
-    public GameInfo(String fatherLogin, int playersCount, int fieldSize) {
+    public GameInfo(String fatherLogin, int playersCount, int fieldSize, String picture) {
         this.fatherLogin = fatherLogin;
-        this.playersCount = playersCount;
+        this.playersCountMax = playersCount;
         this.fieldSize = fieldSize;
+        pictures = new ArrayList<>();
+        pictures.add(picture);
+    }
+
+    public List<String> getPictures() {
+        return pictures;
+    }
+
+    public int getPlayersCountNow() {
+        return playersCountNow;
     }
 
     public String getFatherLogin() {
         return fatherLogin;
     }
 
-    public int getPlayersCount() {
-        return playersCount;
+    public int getPlayersCountMax() {
+        return playersCountMax;
     }
 
     public int getFieldSize() {
         return fieldSize;
     }
 
-    public int getPort() {
-        return port;
+    public void setPlayersCountNow(int playersCountNow) {
+        this.playersCountNow = playersCountNow;
     }
 
-    public void setPort(int port) {
-        this.port = port;
+    public void addToPlayersList(String login, String picture){
+        playersList.put(login, picture);
+    }
+
+    public void deleteFromPlayersList(String login){
+        playersList.remove(login);
+    }
+
+    public HashMap<String,String> getPlayersList(){
+        return playersList;
     }
 }

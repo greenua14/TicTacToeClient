@@ -15,10 +15,6 @@
         <Font name="Arial Bold" size="20.0" />
       </font>
     </Button>
-    <ScrollPane fx:id="allGames" layoutX="14.0" layoutY="100.0" prefHeight="286.0" prefWidth="572.0">
-      <content>
-        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
-      </content>
-    </ScrollPane>
+    <TableView fx:id="createdGamesTable" layoutX="0.0" layoutY="111.0" prefHeight="289.0" prefWidth="600.0" />
   </children>
 </AnchorPane>
