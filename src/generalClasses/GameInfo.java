@@ -18,6 +18,7 @@ public class GameInfo implements Serializable{
     }
 
     public GameInfo(String fatherLogin, int playersCount, int fieldSize, String picture) {
+        playersCountNow = 1;
         this.fatherLogin = fatherLogin;
         this.playersCountMax = playersCount;
         this.fieldSize = fieldSize;

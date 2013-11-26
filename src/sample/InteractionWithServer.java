@@ -23,7 +23,6 @@ public class InteractionWithServer {
             outputStream = new ObjectOutputStream((client.getOutputStream()));
             inputStream = new ObjectInputStream(client.getInputStream());
         } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -35,7 +34,6 @@ public class InteractionWithServer {
             inputStream = new ObjectInputStream(client.getInputStream());
             System.out.println("InteractionWithServer connect gj");
         } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
@@ -45,7 +43,6 @@ public class InteractionWithServer {
             outputStream.flush();
             return (boolean) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
         }
         return false;
     }
@@ -56,7 +53,6 @@ public class InteractionWithServer {
             outputStream.flush();
             return (boolean) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
         }
         return false;
     }
@@ -66,18 +62,26 @@ public class InteractionWithServer {
             outputStream.writeObject(new RegistrationUser(login, password, email));
             outputStream.flush();
         } catch (IOException e) {
-            e.printStackTrace();
         }
     }
 
-    public int createGame(GameInfo gameInfo) throws Exception {
+    public int createGame(GameInfo gameInfo) {
         try {
             outputStream.writeObject(gameInfo);
             outputStream.flush();
             return (int)inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
-            e.printStackTrace();
         }
-        throw new Exception("*** Create game error");
+        return 0;
+    }
+
+    public Object checkCreatedGames(){
+        try {
+            outputStream.writeObject("checkCreatedGames");
+            outputStream.flush();
+            return inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+        }
+        return null;
     }
 }
