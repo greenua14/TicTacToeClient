@@ -22,22 +22,7 @@ public class Main extends Application {
 
 
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-
-        /*GetIpAndPortFromFile config = new GetIpAndPortFromFile();
-        Socket client = null;
-        client = new Socket(config.IP, config.PORT);
-
-        ObjectOutputStream outputStream = new ObjectOutputStream((client.getOutputStream()));
-        ObjectInputStream inputStream = new ObjectInputStream(client.getInputStream());
-        Object obj = new String("hello from client");
-        outputStream.writeObject(obj);
-        outputStream.flush();
-
-
-        System.out.println(inputStream.readObject());*/
         launch(args);
 
     }
-
-
 }

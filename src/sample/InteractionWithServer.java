@@ -1,9 +1,6 @@
 package sample;
 
-import generalClasses.AuthorizationUser;
-import generalClasses.GameInfo;
-import generalClasses.RegistrationUser;
-import generalClasses.UserLogin;
+import generalClasses.*;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -23,6 +20,7 @@ public class InteractionWithServer {
             outputStream = new ObjectOutputStream((client.getOutputStream()));
             inputStream = new ObjectInputStream(client.getInputStream());
         } catch (IOException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
     }
 
@@ -34,6 +32,7 @@ public class InteractionWithServer {
             inputStream = new ObjectInputStream(client.getInputStream());
             System.out.println("InteractionWithServer connect gj");
         } catch (IOException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
     }
 
@@ -43,6 +42,7 @@ public class InteractionWithServer {
             outputStream.flush();
             return (boolean) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
         return false;
     }
@@ -53,6 +53,7 @@ public class InteractionWithServer {
             outputStream.flush();
             return (boolean) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
         return false;
     }
@@ -62,6 +63,7 @@ public class InteractionWithServer {
             outputStream.writeObject(new RegistrationUser(login, password, email));
             outputStream.flush();
         } catch (IOException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
     }
 
@@ -69,19 +71,27 @@ public class InteractionWithServer {
         try {
             outputStream.writeObject(gameInfo);
             outputStream.flush();
-            return (int)inputStream.readObject();
+            return (int) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
         return 0;
     }
 
-    public Object checkCreatedGames(){
+    public Object checkCreatedGames() {
         try {
             outputStream.writeObject("checkCreatedGames");
             outputStream.flush();
             return inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
         return null;
+    }
+
+    public void connectToCreatedGame(String login, String picture) throws IOException {
+        outputStream.writeObject(new ConnectToCreatedGameInfo(login, picture));
+        outputStream.flush();
+        System.out.println("flush");
     }
 }

@@ -29,8 +29,7 @@ public class AuthorizationController {
         String pass = password.getText().trim();
 
         if (!checkInputData(log, pass)) {
-            new LoadSomeForm().load("FXML/errorForm.fxml", "Error");
-            ErrorFormController.textErrorID.setText("Логин - только англ. буквы и цифры \n      и первый символ не цифра \n" +
+            new LoadSomeForm().showErrorMessage("Логин - только англ. буквы и цифры \n      и первый символ не цифра \n" +
                     "Пароль - только англ. буквы и цифры \n");
         } else {
             InteractionWithServer server = new InteractionWithServer();
@@ -38,8 +37,7 @@ public class AuthorizationController {
                 new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", log);
                 closeThis();
             } else {
-                new LoadSomeForm().load("FXML/errorForm.fxml", "Error");
-                ErrorFormController.textErrorID.setText("Неверный логин или пароль");
+                new LoadSomeForm().showErrorMessage("Неверный логин или пароль");
             }
         }
     }

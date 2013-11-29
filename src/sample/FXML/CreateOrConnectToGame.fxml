@@ -7,14 +7,18 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.CreateOrConnectToGameController">
-  <children>
-    <Hyperlink fx:id="out" layoutX="545.0" layoutY="14.0" onAction="#logOut" text="Выйти" />
-    <Button fx:id="createGameButton" layoutX="189.0" layoutY="36.0" mnemonicParsing="false" onAction="#createNewGame" prefHeight="48.0" prefWidth="222.0" text="Создать игру" textAlignment="CENTER" wrapText="false">
-      <font>
-        <Font name="Arial Bold" size="20.0" />
-      </font>
-    </Button>
-    <TableView fx:id="createdGamesTable" layoutX="0.0" layoutY="111.0" prefHeight="289.0" prefWidth="600.0" />
-  </children>
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1"
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.CreateOrConnectToGameController">
+    <children>
+        <Hyperlink fx:id="out" layoutX="545.0" layoutY="14.0" onAction="#logOut" text="Выйти"/>
+        <Button fx:id="createGameButton" layoutX="189.0" layoutY="36.0" mnemonicParsing="false"
+                onAction="#createNewGame" prefHeight="48.0" prefWidth="222.0" text="Создать игру" textAlignment="CENTER"
+                wrapText="false">
+            <font>
+                <Font name="Arial Bold" size="20.0"/>
+            </font>
+        </Button>
+        <TableView fx:id="createdGamesTable" layoutX="0.0" layoutY="111.0" prefHeight="289.0" prefWidth="600.0"/>
+    </children>
 </AnchorPane>

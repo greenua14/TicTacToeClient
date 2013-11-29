@@ -33,13 +33,11 @@ public class RegistrationController {
         String s = checkInputDate(log, pass, pass2, em);
 
         if (!s.equals("")) {
-            new LoadSomeForm().load("FXML/errorForm.fxml", "Error");
-            ErrorFormController.textErrorID.setText(s);
+            new LoadSomeForm().showErrorMessage(s);
         } else {
             InteractionWithServer server = new InteractionWithServer();
             if (server.checkLoginInBD(log)) {
-                new LoadSomeForm().load("FXML/errorForm.fxml", "Error");
-                ErrorFormController.textErrorID.setText("Логин занят");
+                new LoadSomeForm().showErrorMessage("Логин занят");
             } else {
                 InteractionWithServer server2 = new InteractionWithServer();
                 server2.registration(log, pass, em);

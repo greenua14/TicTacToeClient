@@ -55,7 +55,9 @@ public class CreateGameController implements Initializable {
             figureStyle = figStyle.getId();
             String title = ((Stage) createGameButton.getScene().getWindow()).getTitle();
             try {
-                PORT = server.createGame(new GameInfo(title, peopleCount, boxCount, figureStyle));
+                GameInfo gameInfo = new GameInfo(title, peopleCount, boxCount, figureStyle);
+                gameInfo.addToPlayersList(title, figureStyle);
+                PORT = server.createGame(gameInfo);
                 new LoadSomeForm().load("FXML/Game.fxml", title);
                 closeThis();
             } catch (Exception e) {
@@ -119,5 +121,7 @@ public class CreateGameController implements Initializable {
                 addPictures();
             }
         });
+
+
     }
 }
