@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
 
 public class InteractionWithServer {
     private ObjectOutputStream outputStream = null;
@@ -30,7 +31,6 @@ public class InteractionWithServer {
             client = new Socket(config.IP, port);
             outputStream = new ObjectOutputStream((client.getOutputStream()));
             inputStream = new ObjectInputStream(client.getInputStream());
-            System.out.println("InteractionWithServer connect gj");
         } catch (IOException e) {
             new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
@@ -89,9 +89,32 @@ public class InteractionWithServer {
         return null;
     }
 
-    public void connectToCreatedGame(String login, String picture) throws IOException {
-        outputStream.writeObject(new ConnectToCreatedGameInfo(login, picture));
+    public HashMap<String, String> connectToCreatedGame(String login, String picture) throws IOException {
+        outputStream.writeObject(new ConnectOrDisconnectGameInfo(login, picture));
         outputStream.flush();
-        System.out.println("flush");
+        try {
+            return (HashMap<String, String>)inputStream.readObject();
+        } catch (ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
+        }
+        return null;
+    }
+
+    public void disconnectFromGame(String login){
+        try {
+            outputStream.writeObject(new ConnectOrDisconnectGameInfo(login));
+            outputStream.flush();
+        } catch (IOException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
+        }
+    }
+
+    public Step readStep(){
+        try {
+            return (Step) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
+        }
+        return null;
     }
 }

@@ -15,22 +15,24 @@ import sample.LoadSomeForm;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.ResourceBundle;
 
 public class SelectPictureBeforeConnectController implements Initializable {
     public ComboBox selectPicture;
     private ArrayList<String> picturesList = new ArrayList<>();
+    public static HashMap<String, String> playersList;
 
     public void connectToGame(ActionEvent actionEvent) {
-        InteractionWithServer server = new InteractionWithServer((Integer) CreateOrConnectToGameController.infoForConnect.get("PORT"));
-        System.out.println(CreateOrConnectToGameController.infoForConnect.get("PORT"));
+        InteractionWithServer server = new InteractionWithServer(CreateOrConnectToGameController.infoForConnect.getPORT());
         try {
-            server.connectToCreatedGame(CreateOrConnectToGameController.infoForConnect.get("login").toString(),
+             playersList =  server.connectToCreatedGame(CreateOrConnectToGameController.infoForConnect.getFatherLogin(),
                     ((Label)selectPicture.getValue()).getId());
             new LoadSomeForm().load("FXML/Game.fxml", CreateOrConnectToGameController.stage.getTitle());
             ((Stage) selectPicture.getScene().getWindow()).close();
             CreateOrConnectToGameController.stage.close();
+
         } catch (IOException e) {
             new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
@@ -38,7 +40,7 @@ public class SelectPictureBeforeConnectController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        checkFreePictures(CreateOrConnectToGameController.infoForConnect.get("picture").toString());
+        checkFreePictures(CreateOrConnectToGameController.infoForConnect.getPictures());
         addPictures();
 
         selectPicture.setOnAction(new EventHandler<ActionEvent>() {

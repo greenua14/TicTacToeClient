@@ -8,13 +8,22 @@
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="200.0" minWidth="200.0" prefHeight="-1.0" prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.GameController">
-  <children>
-    <GridPane fx:id="gameField" gridLinesVisible="true" layoutX="175.0" layoutY="14.0" prefHeight="-1.0" prefWidth="-1.0" />
-    <Button fx:id="startGameButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#startGame" prefHeight="49.0" prefWidth="140.0" text="START" textAlignment="CENTER" wrapText="false">
-      <font>
-        <Font name="Aharoni Bold" size="20.0" />
-      </font>
-    </Button>
-  </children>
+<AnchorPane id="AnchorPane" maxHeight="-1.0" maxWidth="-1.0" minHeight="200.0" minWidth="200.0" prefHeight="-1.0"
+            prefWidth="-1.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
+            fx:controller="sample.Controllers.GameController">
+    <children>
+        <GridPane fx:id="gameField" gridLinesVisible="true" layoutX="200.0" layoutY="14.0" prefHeight="-1.0"
+                  prefWidth="-1.0"/>
+        <Button fx:id="startGameButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#startGame"
+                prefHeight="49.0" prefWidth="140.0" text="START" textAlignment="CENTER" visible="false"
+                wrapText="false">
+            <font>
+                <Font name="Aharoni Bold" size="20.0"/>
+            </font>
+        </Button>
+        <Pane fx:id="playersTable" layoutX="14.0" layoutY="75.0" opacity="1.0" prefHeight="-1.0" prefWidth="-1.0"/>
+        <Pane fx:id="lostGameLink" layoutX="14" opacity="1">
+            <Hyperlink layoutX="0.0"  text="Покинуть игру" onAction="#lostGame" />
+        </Pane>
+    </children>
 </AnchorPane>

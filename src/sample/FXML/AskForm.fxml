@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="113.0" prefWidth="300.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.AskFormController">
+  <children>
+    <Label fx:id="message" layoutX="14.0" layoutY="14.0" prefHeight="25.0" prefWidth="272.0" text="" textAlignment="CENTER" />
+    <Button layoutX="58.0" layoutY="74.0" mnemonicParsing="false" onAction="#doSome" prefHeight="25.0" prefWidth="70.0" text="Да" />
+    <Button layoutX="174.0" layoutY="74.0" mnemonicParsing="false" onAction="#cancel" prefHeight="25.0" prefWidth="70.0" text="Отмена" />
+  </children>
+</AnchorPane>

@@ -21,14 +21,13 @@ import sample.LoadSomeForm;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.ResourceBundle;
 
 public class CreateOrConnectToGameController implements Initializable {
     public Button createGameButton;
     public TableView createdGamesTable;
     public static Stage stage = null;
-    public static HashMap infoForConnect;
+    public static GameInfo infoForConnect;
 
     public void logOut(ActionEvent actionEvent) {
         new LoadSomeForm().load("FXML/Authorization.fxml", "Авторизация");
@@ -91,10 +90,12 @@ public class CreateOrConnectToGameController implements Initializable {
                                 ErrorFormController.textErrorID.setText("Нету свободных мест, выберите другую игру");
                             } else {
                                 stage = ((Stage) createGameButton.getScene().getWindow());
-                                infoForConnect = new HashMap();
-                                infoForConnect.put("picture", observableList.get(index).getPictures());
-                                infoForConnect.put("PORT", observableList.get(index).getPORT());
-                                infoForConnect.put("login", ((Stage) createGameButton.getScene().getWindow()).getTitle());
+                                infoForConnect = new GameInfo();
+                                infoForConnect.setPictures(observableList.get(index).getPictures());
+                                infoForConnect.setPORT(observableList.get(index).getPORT());
+                                infoForConnect.setFatherLogin(((Stage) createGameButton.getScene().getWindow()).getTitle());
+                                infoForConnect.setFieldSize(observableList.get(index).getFieldSize());
+                                infoForConnect.setPlayersCountMax(observableList.get(index).getPlayersCountMax());
                                 new LoadSomeForm().load("FXML/SelectPictureBeforeConnect.fxml", "");
                             }
                         }

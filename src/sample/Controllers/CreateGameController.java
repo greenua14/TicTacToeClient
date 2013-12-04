@@ -25,10 +25,10 @@ public class CreateGameController implements Initializable {
     public ComboBox<String> fieldSize;
     public ComboBox<Label> pictures;
     private Stage stage = null;
-    public static int PORT;
-    public static int peopleCount;
-    public static int boxCount;
-    public static String figureStyle;
+    private int peopleCount;
+    private int boxCount;
+    private String figureStyle;
+    public static GameInfo gameInfo;
 
     public void goBack(ActionEvent actionEvent) {
         closeThis();
@@ -55,9 +55,9 @@ public class CreateGameController implements Initializable {
             figureStyle = figStyle.getId();
             String title = ((Stage) createGameButton.getScene().getWindow()).getTitle();
             try {
-                GameInfo gameInfo = new GameInfo(title, peopleCount, boxCount, figureStyle);
+                gameInfo = new GameInfo(title, peopleCount, boxCount, figureStyle);
                 gameInfo.addToPlayersList(title, figureStyle);
-                PORT = server.createGame(gameInfo);
+                gameInfo.setPORT(server.createGame(gameInfo));
                 new LoadSomeForm().load("FXML/Game.fxml", title);
                 closeThis();
             } catch (Exception e) {

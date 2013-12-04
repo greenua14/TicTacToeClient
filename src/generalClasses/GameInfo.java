@@ -8,12 +8,12 @@ public class GameInfo implements Serializable{
     private int playersCountMax;
     private int playersCountNow;
     private int fieldSize;
-    private String pictures;
+    private StringBuffer pictures;
     private int PORT;
     private HashMap<String,String> playersList;
 
     public GameInfo(){
-
+        pictures = new StringBuffer("");
     }
 
     public GameInfo(String fatherLogin, int playersCount, int fieldSize, String picture) {
@@ -22,15 +22,21 @@ public class GameInfo implements Serializable{
         this.fatherLogin = fatherLogin;
         this.playersCountMax = playersCount;
         this.fieldSize = fieldSize;
-        pictures = picture;
+        pictures = new StringBuffer();
+        pictures.append(picture);
     }
 
     public String getPictures() {
-        return pictures;
+        return pictures.toString();
     }
 
-    public void setPictures(String pictures) {
-        this.pictures += pictures;
+    public void setPictures(String picture) {
+        this.pictures.append(picture);
+    }
+
+    public void deletePictures(String pic){
+        int i = pictures.indexOf(pic);
+        pictures.delete(i,i+7);
     }
 
     public int getPlayersCountNow() {
@@ -39,6 +45,26 @@ public class GameInfo implements Serializable{
 
     public String getFatherLogin() {
         return fatherLogin;
+    }
+
+    public void setFatherLogin(String fatherLogin) {
+        this.fatherLogin = fatherLogin;
+    }
+
+    public void setPlayersCountMax(int playersCountMax) {
+        this.playersCountMax = playersCountMax;
+    }
+
+    public void setPlayersCountNow(int playersCountNow) {
+        this.playersCountNow = playersCountNow;
+    }
+
+    public void setFieldSize(int fieldSize) {
+        this.fieldSize = fieldSize;
+    }
+
+    public void setPlayersList(HashMap<String, String> playersList) {
+        this.playersList = playersList;
     }
 
     public int getPlayersCountMax() {
