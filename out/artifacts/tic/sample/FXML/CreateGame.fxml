@@ -15,7 +15,7 @@
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="204.00009999999747" prefWidth="276.9998779296875" xmlns:fx="http://javafx.com/fxml/1"
-            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.CreateGameController" fx:id="mainForm">
+            xmlns="http://javafx.com/javafx/2.2" fx:controller="sample.Controllers.CreateGameController">
     <children>
         <Hyperlink fx:id="backLink" layoutX="119.0" layoutY="173.0" onAction="#goBack" text="Назад"/>
         <Label layoutX="14.0" layoutY="14.0" text="Количество игроков"/>

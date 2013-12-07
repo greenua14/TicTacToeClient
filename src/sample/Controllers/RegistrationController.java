@@ -1,20 +1,29 @@
 package sample.Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.InteractionWithServer;
 import sample.LoadSomeForm;
 
-public class RegistrationController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RegistrationController implements Initializable{
 
     public Button regButton;
     public TextField login;
     public PasswordField password;
     public PasswordField confirmPassword;
     public TextField email;
+    public AnchorPane mainForm;
 
     public void showAuthorizationForm(ActionEvent actionEvent) {
         new LoadSomeForm().load("FXML/authorization.fxml", "Авторизация");
@@ -25,7 +34,7 @@ public class RegistrationController {
         ((Stage) regButton.getScene().getWindow()).close();
     }
 
-    public void SignUp(ActionEvent actionEvent) {
+    public void signUp(ActionEvent actionEvent) {
         String log = login.getText().trim();
         String pass = password.getText().trim();
         String pass2 = confirmPassword.getText().trim();
@@ -63,5 +72,17 @@ public class RegistrationController {
             res += "Неверный email-адрес \n";
         }
         return res;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        mainForm.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode().equals(KeyCode.ENTER)){
+                    signUp(new ActionEvent());
+                }
+            }
+        });
     }
 }

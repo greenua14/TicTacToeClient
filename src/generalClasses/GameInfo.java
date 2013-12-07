@@ -14,15 +14,16 @@ public class GameInfo implements Serializable{
 
     public GameInfo(){
         pictures = new StringBuffer("");
+        playersList = new HashMap<>();
     }
 
     public GameInfo(String fatherLogin, int playersCount, int fieldSize, String picture) {
         playersList = new HashMap<>();
+        pictures = new StringBuffer();
         playersCountNow = 1;
         this.fatherLogin = fatherLogin;
         this.playersCountMax = playersCount;
         this.fieldSize = fieldSize;
-        pictures = new StringBuffer();
         pictures.append(picture);
     }
 

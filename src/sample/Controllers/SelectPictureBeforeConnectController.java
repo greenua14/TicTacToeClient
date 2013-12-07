@@ -7,6 +7,9 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import sample.InteractionWithServer;
@@ -21,35 +24,25 @@ import java.util.ResourceBundle;
 
 public class SelectPictureBeforeConnectController implements Initializable {
     public ComboBox selectPicture;
+    public AnchorPane mainForm;
     private ArrayList<String> picturesList = new ArrayList<>();
     public static HashMap<String, String> playersList;
 
     public void connectToGame(ActionEvent actionEvent) {
+        System.out.println("-1");
         InteractionWithServer server = new InteractionWithServer(CreateOrConnectToGameController.infoForConnect.getPORT());
         try {
+            System.out.println("-2");
              playersList =  server.connectToCreatedGame(CreateOrConnectToGameController.infoForConnect.getFatherLogin(),
                     ((Label)selectPicture.getValue()).getId());
             new LoadSomeForm().load("FXML/Game.fxml", CreateOrConnectToGameController.stage.getTitle());
+            System.out.println("-3");
             ((Stage) selectPicture.getScene().getWindow()).close();
             CreateOrConnectToGameController.stage.close();
 
         } catch (IOException e) {
             new LoadSomeForm().showErrorMessage("Сервер не отвечает");
         }
-    }
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        checkFreePictures(CreateOrConnectToGameController.infoForConnect.getPictures());
-        addPictures();
-
-        selectPicture.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                selectPicture.getItems().retainAll();
-                addPictures();
-            }
-        });
     }
 
     private void addPictures() {
@@ -90,5 +83,28 @@ public class SelectPictureBeforeConnectController implements Initializable {
             }
 
         }
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        checkFreePictures(CreateOrConnectToGameController.infoForConnect.getPictures());
+        addPictures();
+
+        selectPicture.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                selectPicture.getItems().retainAll();
+                addPictures();
+            }
+        });
+
+        mainForm.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode().equals(KeyCode.ENTER)){
+                    connectToGame(new ActionEvent());
+                }
+            }
+        });
     }
 }

@@ -9,7 +9,7 @@
 
 <AnchorPane id="AnchorPane" maxWidth="-Infinity" minHeight="227.0" minWidth="-Infinity" prefHeight="232.0"
             prefWidth="274.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2"
-            fx:controller="sample.Controllers.AuthorizationController" fx:id="mainForm">
+            fx:controller="sample.Controllers.AuthorizationController">
     <children>
         <Label layoutX="62.0" layoutY="16.0" prefHeight="30.0" prefWidth="150.0" styleClass="label1"
                text="Авторизация"/>

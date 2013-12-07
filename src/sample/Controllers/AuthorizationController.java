@@ -1,18 +1,26 @@
 package sample.Controllers;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import sample.InteractionWithServer;
 import sample.LoadSomeForm;
 
-public class AuthorizationController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class AuthorizationController implements Initializable{
     public Button signInButton;
     public TextField login;
     public PasswordField password;
-
+    public AnchorPane mainForm;
 
 
     public void showRegistrationForm(ActionEvent actionEvent) throws Exception {
@@ -47,5 +55,17 @@ public class AuthorizationController {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        mainForm.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode().equals(KeyCode.ENTER)){
+                    signIn(new ActionEvent());
+                }
+            }
+        });
     }
 }

@@ -7,12 +7,11 @@ public class Step implements Serializable{
     private int y;
     private String loginLast;
     private String loginNext;
+    private boolean flag ;      //if true then u make a step else u read step
 
-    public Step(int x, int y, String loginLast, String loginNext) {
+    public Step(int x, int y) {
         this.x = x;
         this.y = y;
-        this.loginLast = loginLast;
-        this.loginNext = loginNext;
     }
 
     public int getX() {
@@ -29,5 +28,21 @@ public class Step implements Serializable{
 
     public String getLoginNext() {
         return loginNext;
+    }
+
+    public void setLoginLast(String loginLast) {
+        this.loginLast = loginLast;
+    }
+
+    public void setLoginNext(String loginNext) {
+        this.loginNext = loginNext;
+    }
+
+    public boolean isFlag() {
+        return flag;
+    }
+
+    public void setFlag(boolean flag) {
+        this.flag = flag;
     }
 }

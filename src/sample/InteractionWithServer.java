@@ -69,8 +69,10 @@ public class InteractionWithServer {
 
     public int createGame(GameInfo gameInfo) {
         try {
+            System.out.println("create game");
             outputStream.writeObject(gameInfo);
             outputStream.flush();
+            System.out.println("create game sended");
             return (int) inputStream.readObject();
         } catch (IOException | ClassNotFoundException e) {
             new LoadSomeForm().showErrorMessage("Сервер не отвечает");
@@ -117,4 +119,14 @@ public class InteractionWithServer {
         }
         return null;
     }
+
+    public GameInfo waitPlayers(){
+        try {
+            return (GameInfo) inputStream.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            new LoadSomeForm().showErrorMessage("Сервер не отвечает");
+        }
+        return null;
+    }
+
 }

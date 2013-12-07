@@ -14,6 +14,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import sample.InteractionWithServer;
@@ -24,23 +25,26 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class CreateOrConnectToGameController implements Initializable {
-    public Button createGameButton;
+    public static Button createGameButton;
     public TableView createdGamesTable;
     public static Stage stage = null;
     public static GameInfo infoForConnect;
+    public static AnchorPane mainForm;
 
     public void logOut(ActionEvent actionEvent) {
         new LoadSomeForm().load("FXML/Authorization.fxml", "Авторизация");
+        stage = ((Stage) createGameButton.getScene().getWindow());
         closeThis();
     }
 
-    private void closeThis() {
-        stage = ((Stage) createGameButton.getScene().getWindow());
+    public static void closeThis() {
         stage.close();
     }
 
     public void createNewGame(ActionEvent actionEvent) {
-        closeThis();
+        //closeThis();
+        stage = ((Stage) createGameButton.getScene().getWindow());
+        mainForm.setDisable(true);
         new LoadSomeForm().load("FXML/CreateGame.fxml", stage.getTitle());
     }
 
@@ -82,6 +86,7 @@ public class CreateOrConnectToGameController implements Initializable {
             public void handle(MouseEvent t) {
                 if (t.getButton().equals(MouseButton.PRIMARY)) {
                     if (t.getClickCount() == 2) {
+                        stage = ((Stage) createGameButton.getScene().getWindow());
                         TableCell tableCell = (TableCell) t.getSource();
                         if (tableCell.getItem() != null) {
                             int index = tableCell.getIndex();
@@ -96,7 +101,9 @@ public class CreateOrConnectToGameController implements Initializable {
                                 infoForConnect.setFatherLogin(((Stage) createGameButton.getScene().getWindow()).getTitle());
                                 infoForConnect.setFieldSize(observableList.get(index).getFieldSize());
                                 infoForConnect.setPlayersCountMax(observableList.get(index).getPlayersCountMax());
+                                infoForConnect.setPlayersCountNow(observableList.get(index).getPlayersCountNow());
                                 new LoadSomeForm().load("FXML/SelectPictureBeforeConnect.fxml", "");
+                                //mainForm.setDisable(true);
                             }
                         }
                     }

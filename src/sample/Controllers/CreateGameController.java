@@ -10,6 +10,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import sample.InteractionWithServer;
@@ -24,6 +27,7 @@ public class CreateGameController implements Initializable {
     public ComboBox<String> playersCount;
     public ComboBox<String> fieldSize;
     public ComboBox<Label> pictures;
+    public AnchorPane mainForm;
     private Stage stage = null;
     private int peopleCount;
     private int boxCount;
@@ -32,7 +36,7 @@ public class CreateGameController implements Initializable {
 
     public void goBack(ActionEvent actionEvent) {
         closeThis();
-        new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", stage.getTitle());
+        CreateOrConnectToGameController.mainForm.setDisable(false);
     }
 
     private void closeThis() {
@@ -59,6 +63,7 @@ public class CreateGameController implements Initializable {
                 gameInfo.addToPlayersList(title, figureStyle);
                 gameInfo.setPORT(server.createGame(gameInfo));
                 new LoadSomeForm().load("FXML/Game.fxml", title);
+                CreateOrConnectToGameController.closeThis();
                 closeThis();
             } catch (Exception e) {
                 e.printStackTrace();
@@ -71,9 +76,11 @@ public class CreateGameController implements Initializable {
         imageView.setImage(new Image(path));
         StackPane stackPane = new StackPane();
         stackPane.getChildren().add(imageView);
+
         Label label = new Label();
         label.setGraphic(stackPane);
         label.setId(path.substring(path.length()-7,path.length()));
+
         return label;
     }
 
@@ -122,6 +129,13 @@ public class CreateGameController implements Initializable {
             }
         });
 
-
+        mainForm.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override
+            public void handle(KeyEvent keyEvent) {
+                if (keyEvent.getCode().equals(KeyCode.ENTER)){
+                    createGame(new ActionEvent());
+                }
+            }
+        });
     }
 }

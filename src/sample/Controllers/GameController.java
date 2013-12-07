@@ -1,5 +1,6 @@
 package sample.Controllers;
 
+import generalClasses.GameInfo;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
@@ -12,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.RowConstraints;
 import javafx.stage.Stage;
+import sample.LetsPlayGame;
 import sample.LoadSomeForm;
 
 import java.net.URL;
@@ -21,20 +23,13 @@ import java.util.ResourceBundle;
 public class GameController implements Initializable {
 
     public GridPane gameField;
-    public static String figureStyle;
-    public static int boxCount;
-    public static int peopleCount;
-    public static int PORT;
-    public static String login;
     public Button startGameButton;
-    public Pane playersTable;
-    public Pane lostGameLink;
-    private int playersCountInTable = 0;
+    public static Pane playersTable;
+    public static Pane lostGameLink;
+    public Label playersCount;
     public static Stage stage;
+    public static GameInfo info = null;
 
-    public static boolean makeStep() {
-        return true;
-    }
 
     private Pane createPane(int i, int j) {
         final Pane pane = new Pane();
@@ -64,8 +59,9 @@ public class GameController implements Initializable {
         playersTable.setLayoutX(14);
     }
 
-    private void addPlayersToTable() {
-        for (Map.Entry<String, String> entry : SelectPictureBeforeConnectController.playersList.entrySet()) {
+    private static void addPlayersToTable(Map<String, String> list) {
+        int n = 0;
+        for (Map.Entry<String, String> entry : list.entrySet()) {
             Pane pane = new Pane();
             pane.setId(entry.getKey());
             Label label = new Label(entry.getKey());
@@ -77,14 +73,20 @@ public class GameController implements Initializable {
             view.setFitHeight(20);
             pane.getChildren().add(view);
             pane.getChildren().add(label);
-            pane.setLayoutY(playersCountInTable);
-            playersCountInTable += 35;
+            pane.setLayoutY(n);
+            n += 35;
             playersTable.getChildren().add(pane);
         }
-        lostGameLink.setLayoutY(playersCountInTable+20);
+        lostGameLink.setLayoutY(n + 60);
     }
 
-    private void addPlayersToTable(String login, String picture) {
+
+    public static void rebuildPlayersTable(Map<String, String> list) {
+        playersTable.getChildren().retainAll();
+        addPlayersToTable(list);
+    }
+
+    private void addPlayerToTable(String login, String picture) {
         Pane pane = new Pane();
         pane.setId(login);
         Label label = new Label(login);
@@ -96,7 +98,7 @@ public class GameController implements Initializable {
         view.setFitHeight(20);
         pane.getChildren().add(view);
         pane.getChildren().add(label);
-        pane.setLayoutY(playersCountInTable);
+        pane.setLayoutY(0);
         playersTable.getChildren().add(pane);
         lostGameLink.setLayoutY(140);
     }
@@ -105,30 +107,25 @@ public class GameController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         if (CreateGameController.gameInfo != null) {
-            boxCount = CreateGameController.gameInfo.getFieldSize();
-            peopleCount = CreateGameController.gameInfo.getPlayersCountMax();
-            figureStyle = CreateGameController.gameInfo.getPictures();
-            PORT = CreateGameController.gameInfo.getPORT();
-            login = CreateGameController.gameInfo.getFatherLogin();
-            startGameButton.setVisible(true);
-            startGameButton.setDisable(true);
-            createPlayersTable(100);
-            addPlayersToTable(login, figureStyle);
+            info = CreateGameController.gameInfo;
+            createPlayersTable(50);
+            addPlayerToTable(info.getFatherLogin(), info.getPictures());
+            playersCount.setText(info.getPlayersCountNow() + " / " + info.getPlayersCountMax());
 
         } else {
-            boxCount = CreateOrConnectToGameController.infoForConnect.getFieldSize();
-            figureStyle = CreateOrConnectToGameController.infoForConnect.getPictures();
-            login = CreateOrConnectToGameController.infoForConnect.getFatherLogin();
-            PORT = CreateOrConnectToGameController.infoForConnect.getPORT();
-            createPlayersTable(20);
-            addPlayersToTable();
+            System.out.println("1");
+            info = CreateOrConnectToGameController.infoForConnect;
+            createPlayersTable(50);
+            addPlayersToTable(SelectPictureBeforeConnectController.playersList);
+            playersCount.setText((info.getPlayersCountNow()+1) + " / " + info.getPlayersCountMax());
+            System.out.println("2");
         }
-        createGameField(boxCount);
+        createGameField(info.getFieldSize());
         gameField.setDisable(true);
-        //new InteractionWithServer().readStep();
-    }
-
-    public void startGame(ActionEvent actionEvent) {
+        System.out.println("3");
+        Thread thread = new Thread(new LetsPlayGame(info));
+        thread.start();
+        System.out.println("4");
 
     }
 
@@ -137,4 +134,5 @@ public class GameController implements Initializable {
         new LoadSomeForm().load("FXML/AskForm.fxml", "");
         AskFormController.message.setText("Вы действительно хотите покинуть игру?");
     }
+
 }

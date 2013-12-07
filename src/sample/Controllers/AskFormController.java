@@ -11,8 +11,8 @@ public class AskFormController {
     static public Label message;
 
     public void doSome(ActionEvent actionEvent) {
-        new InteractionWithServer(GameController.PORT).disconnectFromGame(GameController.login);
-        new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", GameController.login);
+        new InteractionWithServer(GameController.info.getPORT()).disconnectFromGame(GameController.info.getFatherLogin());
+        new LoadSomeForm().load("FXML/CreateOrConnectToGame.fxml", GameController.info.getFatherLogin());
         closeThis();
         GameController.stage.close();
     }
